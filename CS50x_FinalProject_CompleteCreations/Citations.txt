@@ -1,0 +1,12 @@
+
+Chris Compierchio Final Project Citations
+
+
+The following is a list of sources used to help format my final project. There were a few cool features I wanted the website to have as I plan to use this website beyond this course, and so some code was taken from outside sources.
+
+
+- General format for index.html from: https://startbootstrap.com/theme/grayscale - I had some trouble using the bootstrap link to import the css styles so I copied the css code into my own css file and used that instead.
+
+- General format for the contact form in contact.html from: https://codepen.io/ZachSaucier/pen/jOwNvO - Full functionality developed by me and my research regarding Flask-mail.
+
+***Everything else was completely developed by me. This includes all the edits and changes to the templates mentioned above, app.py, all the images, about.html, projects.html, the email functionality in contact.html, etc.

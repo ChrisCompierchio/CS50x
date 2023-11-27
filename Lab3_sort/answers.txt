@@ -1,0 +1,29 @@
+sort1 uses: Bubble sort
+
+How do you know?: Throughout my tests, I found that Sort1 was the slowest
+at sorting the random and reversed text files with the highest amount of
+numbers (50000). This aligns with the race done in lecture as the
+slowest algorithm was in fact the Bubble sort algorithm. Notice also that
+sort1 was the quickest at checking an already sorted file. This also tells
+me that it used the Bubble sort algorithm since each pair it checks
+is already sorted.
+
+sort2 uses: Merge Sort
+
+How do you know?: Throughout my tests, I found that Sort2 was the fastest
+at sorting the random and reversed text files with the highest amount of
+numbers (50000). This aligns with the race done in lecture as the
+fastest algorithm was in fact the Merge sort algorithm. Sort2 was the second fastest
+at checking an already sorted text file. This tells me it was used the Merge
+sort algorithm because although everything is already sorted, it still has to
+split the data in to halves and check each half.
+
+sort3 uses: Selection sort
+
+How do you know?: Throughout my tests, I found that Sort3 was the second slowest
+at sorting the random and reversed text files with the highest amount of
+numbers (50000). This aligns with the race done in lecture as the second
+slowest algorithm was in fact the Selection sort algorithm. sort3 was the slowest at
+checking an already sorted file. This tells me it used the Selection sort
+because it has to go through the file a numerous amount of times in order
+to check the sort status.

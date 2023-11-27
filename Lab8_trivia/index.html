@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            function answer(){
+
+                document.querySelector("#wrong").onclick = function() {
+                    document.querySelector("#wrong").style.backgroundColor = 'red';
+                    document.querySelector("#wrong2").style.backgroundColor = '#d9edff';
+                    document.querySelector("#right").style.backgroundColor = '#d9edff';
+                    document.getElementById("incorrect").innerHTML = "INCORRECT!";
+                }
+
+                document.querySelector("#wrong2").onclick = function() {
+                    document.querySelector("#wrong2").style.backgroundColor = 'red';
+                    document.querySelector("#wrong").style.backgroundColor = '#d9edff';
+                    document.querySelector("#right").style.backgroundColor = '#d9edff';
+                    document.getElementById("incorrect").innerHTML = "INCORRECT!";
+                }
+
+                document.querySelector("#right").onclick = function() {
+                    document.querySelector("#right").style.backgroundColor = 'green';
+                    document.querySelector("#wrong2").style.backgroundColor = '#d9edff';
+                    document.querySelector("#wrong").style.backgroundColor = '#d9edff';
+                    document.getElementById("incorrect").innerHTML = "CORRECT!";
+                }
+            }
+
+            function jigsaw()
+            {
+                if (document.getElementById("jigsaw").value.toLowerCase() == "amanda")
+                {
+                    document.getElementById("correct").innerHTML = "CORRECT!";
+                    document.querySelector("#jigsaw").style.backgroundColor = "green";
+                }
+                else
+                {
+                    document.getElementById("correct").innerHTML = "INCORRECT!";
+                    document.querySelector("#jigsaw").style.backgroundColor = "red";
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Who Is The Killer In Friday The 13th?</h3>
+                <p id = "incorrect"></p>
+                <break></break>
+                <button type = "button" id = "wrong" onMouseUp = "answer()">Jason Voorhees</button>
+                <button type = "button" id = "right" onMouseUp = "answer()">Mrs. Voorhees</button>
+                <button type = "button" id = "wrong2" onMouseUp = "answer()">Michael Myers</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the name of Jigsaw's first apprentice?</h3>
+                <p id = "correct"></p>
+                <break></break>
+                <input type="text" id = "jigsaw"></input>
+                <button type = "button" id = "chk" onMouseUp = "jigsaw()">Check Answer</button>
+            </div>
+        </div>
+    </body>
+</html>

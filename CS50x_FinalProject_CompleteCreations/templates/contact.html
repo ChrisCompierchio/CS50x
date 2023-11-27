@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <link href="/static/css/contact.css" rel="stylesheet">
+
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: black" id="mainNav">
+        <div class="container px-4 px-lg-5" style="background-color: black">
+            <a style="font-family: Dancing Script; font-size: 46px; color: white" class="navbar-brand" href="/">Complete Creations <br> <p style="font-size: 16px; color: rgba(245, 40, 145, 0.8); text-align: center">by [Name removed for privacy purposes]</p></a>
+            <div>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a style="color: white"class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a style="color: white" class="nav-link" href="/projects">Projects</a></li>
+                    <li class="nav-item"><a style="color: white" class="nav-link" href="/contact">Order</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <form action = "/contact" method = post>
+        <input name="name" type="text" class="feedback-input" placeholder="Name" />
+        <input name="email" type="text" class="feedback-input" placeholder="Email" />
+        <textarea name="text" class="feedback-input" placeholder="Order Details"></textarea>
+        <p style="color:white; text-align: center">
+            {% if (get_flashed_messages() != "") %}
+                {% for mesg in get_flashed_messages() %}
+                    {{ mesg }}
+                {% endfor %}
+            {% endif %}
+        </p>
+
+        <input type="submit" value="SUBMIT"/>
+    </form>
+
+</html>
